@@ -18,9 +18,9 @@
     <div id="chartdiv"></div>
     <div id="chartdiv2"></div>
     <script src="v3.js"></script>
-    <script src="../../../core.js"></script>
-    <script src="../../../charts.js"></script>
-    <script src="../../../themes/animated.js"></script>
+    <script src="core.js"></script>
+    <script src="charts.js"></script>
+    <script src="themes/animated.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
