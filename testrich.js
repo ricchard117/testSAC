@@ -1,4 +1,5 @@
 (function() { 
+	console.log("antes del html");
 	let template = document.createElement("template");
 	template.innerHTML = `
 		
@@ -424,8 +425,10 @@ function getPoints() {
 `;
 
 	class grafica_Rich extends HTMLElement {
+		console.log("entra a la clase");
 		constructor() {
-			super(); 	
+			console.log("entra a el constructor");
+			super(); 	 	
 		}
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
