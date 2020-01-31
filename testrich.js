@@ -1,5 +1,4 @@
 (function() { 
-	console.log("antes del html");
 	let template = document.createElement("template");
 	template.innerHTML = `
 		
@@ -21,6 +20,7 @@
 		#chartdiv {
 		max-width: 100%;
 		height: 500px;
+		</style>
 		<!-- Resources -->
 		<script src="https://www.amcharts.com/lib/4/core.js"></script>
 		<script src="https://www.amcharts.com/lib/4/charts.js"></script>
@@ -421,15 +421,18 @@ function getPoints() {
 
 <!-- HTML -->
 <div id="chartdiv"></div>
-		</style>
-
 `;
-console.log("despues del html");
+
 	class grafica_Rich extends HTMLElement {
-		console.log("entra a la clase");
 		constructor() {
-			console.log("entra a el constructor");
-			super(); 	 	
+			super(); 
+			let shadowRoot = this.attachShadow({mode: "open"});
+			shadowRoot.appendChild(template.content.cloneNode(true));
+			this.addEventListener("click", event => {
+				var event = new Event("onClick");
+				this.dispatchEvent(event);
+			});
+			this._props = {};
 		}
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
