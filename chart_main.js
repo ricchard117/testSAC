@@ -434,5 +434,5 @@ this.style["opacity"] = changedProperties["opacity"];
 }
 }
 }
-customElements.define("com-demo-Rich", chordRich);
+customElements.define("com.demo.Rich", chordRich);
 })();
