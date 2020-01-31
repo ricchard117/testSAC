@@ -423,7 +423,7 @@ function getPoints() {
 <!-- HTML -->
 <div id="chartdiv"></div>
 `;
-
+console.log("despues del html");
 	class grafica_Rich extends HTMLElement {
 		console.log("entra a la clase");
 		constructor() {
