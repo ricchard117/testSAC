@@ -15,7 +15,7 @@ template.innerHTML = `
 
 	
 `;
-class RotatedSeries extends HTMLElement {
+class RotatedSeriesTest extends HTMLElement {
 
 constructor() {
 super();
@@ -35,7 +35,7 @@ this.style["opacity"] = changedProperties["opacity"];
 }
 }
 }
-customElements.define("com_sap_sample_RotatedSeries", RotatedSeries);
+customElements.define("RotatedSeriesMain", RotatedSeries);
 })();
 
 
